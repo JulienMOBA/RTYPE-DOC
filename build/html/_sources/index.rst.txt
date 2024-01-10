@@ -14,7 +14,6 @@ Contents:
 
    overview
    registry
-   RTYPE-DOC
    sceneManager
    sceneManagerimpl
    sparsearray
