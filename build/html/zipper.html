@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>zipper &#8212; TestDoc  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=12dfc556" />
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="zipper_iterator" href="zipper_iterator.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <p>zipper.hpp - Zipper Class for Synchronized Container Iteration</p>
+<hr class="docutils" />
+<nav class="contents" id="table-of-contents" role="doc-toc">
+<p class="topic-title">Table of Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#zipper" id="id1">zipper</a></p></li>
+<li><p><a class="reference internal" href="#key-methods" id="id2">Key Methods</a></p></li>
+<li><p><a class="reference internal" href="#private-member-functions" id="id3">Private Member Functions</a></p></li>
+</ul>
+</nav>
+<p>Introduction</p>
+<p>The zipper.hpp file introduces the zipper template class, designed to facilitate the synchronized iteration over multiple containers. It utilizes the zipper_iterator class to create a seamless interface for handling multiple containers as if they were a single collection.
+Template Class Design</p>
+<section id="zipper">
+<h1><a class="toc-backref" href="#id1" role="doc-backlink">zipper</a><a class="headerlink" href="#zipper" title="Link to this heading">¶</a></h1>
+<blockquote>
+<div><p>Purpose: Creates a synchronized iterator interface for multiple containers.
+Template Parameters: Containers… - The types of containers to be zipped together.
+Type Definitions:</p>
+<blockquote>
+<div><p>iterator: Defined as zipper_iterator&lt;Containers…&gt;.
+iterator_tuple: A tuple of iterators, one for each container.</p>
+</div></blockquote>
+</div></blockquote>
+</section>
+<section id="key-methods">
+<h1><a class="toc-backref" href="#id2" role="doc-backlink">Key Methods</a><a class="headerlink" href="#key-methods" title="Link to this heading">¶</a></h1>
+<blockquote>
+<div><p>Constructor: Initializes the zipper with references to the containers. Computes the size and end iterators for the zipped iteration.
+begin() Method: Returns an iterator to the beginning of the zipped containers.
+end() Method: Returns an iterator to the end of the zipped containers.</p>
+</div></blockquote>
+</section>
+<section id="private-member-functions">
+<h1><a class="toc-backref" href="#id3" role="doc-backlink">Private Member Functions</a><a class="headerlink" href="#private-member-functions" title="Link to this heading">¶</a></h1>
+<blockquote>
+<div><p>_compute_size(Containers&amp;… containers): Computes the maximum size among the provided containers.
+_compute_end(Containers&amp;… containers): Creates an iterator tuple pointing to the end of each container.</p>
+</div></blockquote>
+<p>Conclusion</p>
+<p>The zipper class offers an elegant solution for iterating over multiple containers simultaneously, enhancing the ability to perform complex operations that require data from multiple sources. Its integration with the zipper_iterator class makes it a valuable tool for advanced data manipulation and parallel processing in the R-Type project.</p>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">TestDoc</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="sceneManager.html">Button</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sceneManager.html#interactiveelement">InteractiveElement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sceneManager.html#staticelement">StaticElement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sceneManager.html#screen">Screen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sceneManager.html#scenemanager-class">SceneManager Class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sparsearray.html">sparse_array Template Class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sparsearray.html#key-methods-and-operators">Key Methods and Operators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="zipper_iterator.html">zipper_iterator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="zipper_iterator.html#key-methods-and-operators">Key Methods and Operators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="zipper_iterator.html#private-member-functions">Private Member Functions</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">zipper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#key-methods">Key Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#private-member-functions">Private Member Functions</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="zipper_iterator.html" title="previous chapter">zipper_iterator</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2024, Julien.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 7.2.6</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.15</a>
+      
+      |
+      <a href="_sources/zipper.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -1,0 +1,44 @@
+SceneManager.cpp - Implementation of Scene Management
+
+=========================================================
+
+.. contents:: Table of Contents
+    :depth: 2
+Introduction
+
+The SceneManager.cpp file provides the implementation details for the SceneManager class defined in scene_manager.hpp. It includes the logic behind scene creation, switching, and management within the game.
+Implementation Details
+
+SceneManager Constructor
+^^^^^^^^^^^^^^^^^^^^^^^
+
+    Purpose: Initializes a SceneManager instance.
+    Implementation: Sets current_scene_index to -1, indicating no scene is currently active.
+
+create_scene Method
+^^^^^^^^^^^^^^^^^^^
+
+    Purpose: Creates a new scene and adds it to the scene list.
+    Implementation: Adds a new registry object to scenes. Returns the index of the newly created scene.
+
+switch_scene Method
+^^^^^^^^^^^^^^^^^^^
+
+    Purpose: Switches the current scene to the one specified by scene_index.
+    Implementation: Checks if scene_index is valid and updates current_scene_index. Throws std::runtime_error if the index is invalid.
+
+get_current_scene Method
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+    Purpose: Retrieves the current active scene.
+    Implementation: Returns the registry object of the current scene. Throws std::runtime_error if no scene is currently active.
+
+run_current_scene_systems Method
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    Purpose: Executes systems for the current scene.
+    Implementation: Retrieves the current scene's registry and runs its systems. The method includes placeholder comments for the actual system execution logic.
+
+Conclusion
+
+SceneManager.cpp provides essential functionality for managing scenes within the game, including scene creation, switching, and running scene-specific systems. This implementation is critical for the dynamic and interactive aspects of the R-Type project.

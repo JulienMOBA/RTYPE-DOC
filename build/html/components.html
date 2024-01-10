@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Position &#8212; TestDoc  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=12dfc556" />
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="zipper_iterator" href="zipper_iterator.html" />
+    <link rel="prev" title="sparse_array Template Class" href="sparsearray.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <p>components.hpp - Game Component Structures</p>
+<hr class="docutils" />
+<nav class="contents" id="table-of-contents" role="doc-toc">
+<p class="topic-title">Table of Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#position" id="id1">Position</a></p></li>
+<li><p><a class="reference internal" href="#drawable" id="id2">Drawable</a></p></li>
+<li><p><a class="reference internal" href="#clickable" id="id3">Clickable</a></p></li>
+<li><p><a class="reference internal" href="#sound" id="id4">Sound</a></p></li>
+<li><p><a class="reference internal" href="#controllable" id="id5">Controllable</a></p></li>
+<li><p><a class="reference internal" href="#speed" id="id6">Speed</a></p></li>
+<li><p><a class="reference internal" href="#hitable" id="id7">Hitable</a></p></li>
+<li><p><a class="reference internal" href="#health" id="id8">Health</a></p></li>
+<li><p><a class="reference internal" href="#weaponized" id="id9">Weaponized</a></p></li>
+<li><p><a class="reference internal" href="#damage" id="id10">Damage</a></p></li>
+<li><p><a class="reference internal" href="#item" id="id11">Item</a></p></li>
+<li><p><a class="reference internal" href="#score" id="id12">Score</a></p></li>
+<li><p><a class="reference internal" href="#life" id="id13">Life</a></p></li>
+<li><p><a class="reference internal" href="#area" id="id14">Area</a></p></li>
+<li><p><a class="reference internal" href="#text" id="id15">Text</a></p></li>
+</ul>
+</nav>
+<p>Introduction</p>
+<p>The components.hpp file is a crucial part of the game’s architecture, defining various structures representing different game components. These components are used to assign properties and behaviors to game entities.
+Structures Overview</p>
+<section id="position">
+<h1><a class="toc-backref" href="#id1" role="doc-backlink">Position</a><a class="headerlink" href="#position" title="Link to this heading">¶</a></h1>
+<blockquote>
+<div><p>Purpose: Represents an entity’s position and velocity in the game world.
+Attributes: x, y for position; vx, vy for velocity.</p>
+</div></blockquote>
+</section>
+<section id="drawable">
+<h1><a class="toc-backref" href="#id2" role="doc-backlink">Drawable</a><a class="headerlink" href="#drawable" title="Link to this heading">¶</a></h1>
+<blockquote>
+<div><p>Purpose: To hold a drawable sprite using the SFML library.
+Attributes: sf::Sprite sprite.</p>
+</div></blockquote>
+</section>
+<section id="clickable">
+<h1><a class="toc-backref" href="#id3" role="doc-backlink">Clickable</a><a class="headerlink" href="#clickable" title="Link to this heading">¶</a></h1>
+<blockquote>
+<div><p>Purpose: Defines clickable UI elements like buttons.
+Attributes: An enumeration buttonType with values like startGame, options, leaveGame.</p>
+</div></blockquote>
+</section>
+<section id="sound">
+<h1><a class="toc-backref" href="#id4" role="doc-backlink">Sound</a><a class="headerlink" href="#sound" title="Link to this heading">¶</a></h1>
+<blockquote>
+<div><p>Purpose: Manages sound properties for an entity.
+Attributes: soundLocation for file path, volume (0 to 100), and loop as a boolean.</p>
+</div></blockquote>
+</section>
+<section id="controllable">
+<h1><a class="toc-backref" href="#id5" role="doc-backlink">Controllable</a><a class="headerlink" href="#controllable" title="Link to this heading">¶</a></h1>
+<blockquote>
+<div><p>Purpose: Assigns keyboard controls to an entity.
+Attributes: sf::Keyboard::Key for up, down, left, right, escape.</p>
+</div></blockquote>
+</section>
+<section id="speed">
+<h1><a class="toc-backref" href="#id6" role="doc-backlink">Speed</a><a class="headerlink" href="#speed" title="Link to this heading">¶</a></h1>
+<blockquote>
+<div><p>Purpose: Specifies the speed of an entity.
+Attributes: speed as a float.</p>
+</div></blockquote>
+</section>
+<section id="hitable">
+<h1><a class="toc-backref" href="#id7" role="doc-backlink">Hitable</a><a class="headerlink" href="#hitable" title="Link to this heading">¶</a></h1>
+<blockquote>
+<div><p>Purpose: Defines a hitbox for collision detection.
+Attributes: x, y, width, height for hitbox dimensions.</p>
+</div></blockquote>
+</section>
+<section id="health">
+<h1><a class="toc-backref" href="#id8" role="doc-backlink">Health</a><a class="headerlink" href="#health" title="Link to this heading">¶</a></h1>
+<blockquote>
+<div><p>Purpose: Manages health-related properties.
+Attributes: maxHealth, health.</p>
+</div></blockquote>
+</section>
+<section id="weaponized">
+<h1><a class="toc-backref" href="#id9" role="doc-backlink">Weaponized</a><a class="headerlink" href="#weaponized" title="Link to this heading">¶</a></h1>
+<blockquote>
+<div><p>Purpose: Assigns weapon properties to an entity.
+Attributes: Enumeration weapon, weaponLevel, nbProjectile.</p>
+</div></blockquote>
+</section>
+<section id="damage">
+<h1><a class="toc-backref" href="#id10" role="doc-backlink">Damage</a><a class="headerlink" href="#damage" title="Link to this heading">¶</a></h1>
+<blockquote>
+<div><p>Purpose: Represents the damage capability of an entity.
+Attributes: dmg as a float.</p>
+</div></blockquote>
+</section>
+<section id="item">
+<h1><a class="toc-backref" href="#id11" role="doc-backlink">Item</a><a class="headerlink" href="#item" title="Link to this heading">¶</a></h1>
+<blockquote>
+<div><p>Purpose: Represents items that can be collected for upgrades.
+Attributes: Enumeration items with types like heal, maxHealth, etc.</p>
+</div></blockquote>
+</section>
+<section id="score">
+<h1><a class="toc-backref" href="#id12" role="doc-backlink">Score</a><a class="headerlink" href="#score" title="Link to this heading">¶</a></h1>
+<blockquote>
+<div><p>Purpose: Holds the game score.
+Attributes: score as a float.</p>
+</div></blockquote>
+</section>
+<section id="life">
+<h1><a class="toc-backref" href="#id13" role="doc-backlink">Life</a><a class="headerlink" href="#life" title="Link to this heading">¶</a></h1>
+<blockquote>
+<div><p>Purpose: Represents the number of lives an entity has.
+Attributes: nbLives as an integer.</p>
+</div></blockquote>
+</section>
+<section id="area">
+<h1><a class="toc-backref" href="#id14" role="doc-backlink">Area</a><a class="headerlink" href="#area" title="Link to this heading">¶</a></h1>
+<blockquote>
+<div><p>Purpose: Defines an area of effect.
+Attributes: area as a float.</p>
+</div></blockquote>
+</section>
+<section id="text">
+<h1><a class="toc-backref" href="#id15" role="doc-backlink">Text</a><a class="headerlink" href="#text" title="Link to this heading">¶</a></h1>
+<blockquote>
+<div><p>Purpose: Manages text properties for display.
+Attributes: text, size in pixels, fontLocation, sf::Color color.</p>
+</div></blockquote>
+<p>Conclusion</p>
+<p>The components.hpp file defines a set of structures essential for various aspects of game functionality, from controlling entity behavior to managing UI elements. Proper understanding and usage of these components are key to effective game development in the R-Type project.</p>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">TestDoc</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">B5 - Advanced C++</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sceneManager.html">Button</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sceneManager.html#interactiveelement">InteractiveElement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sceneManager.html#staticelement">StaticElement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sceneManager.html#screen">Screen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sceneManager.html#scenemanager-class">SceneManager Class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sceneManagerimpl.html">SceneManager Constructor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sceneManagerimpl.html#create-scene-method">create_scene Method</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sceneManagerimpl.html#switch-scene-method">switch_scene Method</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sceneManagerimpl.html#get-current-scene-method">get_current_scene Method</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sceneManagerimpl.html#run-current-scene-systems-method">run_current_scene_systems Method</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sparsearray.html">sparse_array Template Class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sparsearray.html#key-methods-and-operators">Key Methods and Operators</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Position</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#drawable">Drawable</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#clickable">Clickable</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#sound">Sound</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#controllable">Controllable</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#speed">Speed</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#hitable">Hitable</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#health">Health</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#weaponized">Weaponized</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#damage">Damage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#item">Item</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#score">Score</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#life">Life</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#area">Area</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#text">Text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="zipper_iterator.html">zipper_iterator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="zipper_iterator.html#key-methods-and-operators">Key Methods and Operators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="zipper_iterator.html#private-member-functions">Private Member Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="zipper.html">zipper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="zipper.html#key-methods">Key Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="zipper.html#private-member-functions">Private Member Functions</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="sparsearray.html" title="previous chapter">sparse_array Template Class</a></li>
+      <li>Next: <a href="zipper_iterator.html" title="next chapter">zipper_iterator</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2024, Julien.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 7.2.6</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.15</a>
+      
+      |
+      <a href="_sources/components.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

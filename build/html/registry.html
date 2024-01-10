@@ -3,27 +3,24 @@
 <html lang="en" data-content_root="./">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Search &#8212; TestDoc  documentation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Introduction &#8212; TestDoc  documentation</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d1102ebc" />
     <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=12dfc556" />
-    
     <script src="_static/documentation_options.js?v=5929fcd5"></script>
     <script src="_static/doctools.js?v=888ff710"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="_static/searchtools.js"></script>
-    <script src="_static/language_data.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="#" />
-  <script src="searchindex.js" defer></script>
-  
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Welcome to Doc’s documentation!" href="RTYPE-DOC.html" />
+    <link rel="prev" title="B5 - Advanced C++" href="overview.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
 
   
   
-
 
   </head><body>
   
@@ -35,36 +32,68 @@
 
           <div class="body" role="main">
             
-  <h1 id="search-documentation">Search</h1>
-  
-  <noscript>
-  <div class="admonition warning">
-  <p>
-    Please activate JavaScript to enable the search
-    functionality.
-  </p>
-  </div>
-  </noscript>
-  
-  
-  <p>
-    Searching for multiple words only shows matches that contain
-    all words.
-  </p>
-  
-  
-  <form action="" method="get">
-    <input type="text" name="q" aria-labelledby="search-documentation" value="" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
-    <input type="submit" value="search" />
-    <span id="search-progress" style="padding-left: 10px"></span>
-  </form>
-  
-  
-  
-  <div id="search-results">
-  
-  </div>
-  
+  <p>registry.hpp - Component Registry for Game Development</p>
+<blockquote>
+<div><p>Introduction
+File Description
+Key Functions
+Usage Examples
+Included Libraries and Their Purposes</p>
+</div></blockquote>
+<section id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">¶</a></h1>
+<p>The registry.hpp file is a core part of the B-CPP-500 R-Type project. It is designed for efficient management of game entities and their components within the game’s architecture, especially in a networked environment.
+File Description</p>
+<blockquote>
+<div><p>Purpose: To provide a central registry system for managing game entities and components.
+Primary Role: Handling creation, retrieval, and management of game components and entities.</p>
+</div></blockquote>
+<p>Key Functions</p>
+<blockquote>
+<div><dl class="simple">
+<dt>register_component&lt;Component&gt;():</dt><dd><p>Purpose: Registers a new component type in the registry.
+Parameters: Template parameter Component - Type of the component to register.
+Return: Reference to the sparse_array of the registered component.</p>
+</dd>
+<dt>get_components&lt;Component&gt;():</dt><dd><p>Purpose: Retrieves the array of components of a specific type.
+Parameters: Template parameter Component - Type of the component to retrieve.
+Return: Reference to the sparse_array of the requested component.</p>
+</dd>
+<dt>spawn_entity():</dt><dd><p>Purpose: Creates a new game entity.
+Return: entity_t representing the unique ID of the new entity.</p>
+</dd>
+<dt>kill_entity(entity_t const&amp; e):</dt><dd><p>Purpose: Marks an entity for removal from the game.
+Parameters: e - The entity to be removed.</p>
+</dd>
+<dt>add_component&lt;Component&gt;(entity_t const&amp; to, Component&amp;&amp; component):</dt><dd><p>Purpose: Adds a component to a specified entity.
+Parameters: to - Entity ID to add the component to; component - The component to be added.
+Return: Reference to the added component.</p>
+</dd>
+<dt>run_systems():</dt><dd><p>Purpose: Executes all registered systems in the registry.
+Details: Systems are functions that operate on components and entities.</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>Usage Examples</p>
+<p>cpp</p>
+<p>registry myRegistry;
+auto&amp; positionComponents = myRegistry.register_component&lt;PositionComponent&gt;();
+entity_t playerEntity = myRegistry.spawn_entity();
+myRegistry.add_component(playerEntity, PositionComponent{0, 0});</p>
+<p>Included Libraries and Their Purposes</p>
+<blockquote>
+<div><p>&lt;any&gt;: For storing any type of component in a type-safe way.
+&lt;cstdint&gt;: For standard integer type definitions.
+&lt;functional&gt;: For handling function objects and lambda expressions.
+&lt;stdexcept&gt;: For exception handling.
+&lt;typeindex&gt;: For managing type information at runtime.
+&lt;unordered_map&gt;: For efficient storage and retrieval of components.
+&lt;vector&gt;: For dynamic array management, used in storing entities and components.</p>
+</div></blockquote>
+<p>Conclusion</p>
+<p>The registry.hpp file is fundamental in managing the dynamic aspects of game entities and their behaviors. It enables a modular and efficient approach to building and managing game components, crucial for the development of the B-CPP-500 R-Type project.</p>
+</section>
+
 
           </div>
           
@@ -83,9 +112,9 @@
 
 <h3>Navigation</h3>
 <p class="caption" role="heading"><span class="caption-text">Table of Contents</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="overview.html">B5 - Advanced C++</a></li>
-<li class="toctree-l1"><a class="reference internal" href="registry.html">Introduction</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="RTYPE-DOC.html">Welcome to Doc’s documentation!</a></li>
 <li class="toctree-l1"><a class="reference internal" href="RTYPE-DOC.html#indices-and-tables">Indices and tables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sceneManager.html">Button</a></li>
@@ -127,9 +156,21 @@
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="overview.html" title="previous chapter">B5 - Advanced C++</a></li>
+      <li>Next: <a href="RTYPE-DOC.html" title="next chapter">Welcome to Doc’s documentation!</a></li>
   </ul></li>
 </ul>
 </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
 
 
 
@@ -149,6 +190,9 @@
       Powered by <a href="https://www.sphinx-doc.org/">Sphinx 7.2.6</a>
       &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.15</a>
       
+      |
+      <a href="_sources/registry.rst.txt"
+          rel="nofollow">Page source</a>
     </div>
 
     
