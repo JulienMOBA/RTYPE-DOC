@@ -24,7 +24,7 @@ Contents:
 Indices and tables
 ==================
 
-* :ref:`genindex`
-* :ref:`modindex`
+* :ref:`R-Type Online Doc`
 * :ref:`search`
+* :ref:`modindex`
 
